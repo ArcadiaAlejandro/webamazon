@@ -1,0 +1,126 @@
+# Obtener todos los usuarios
+GET http://localhost:3000/usuarios
+Content-Type: application/json
+
+###
+
+# Obtener usuarios por tipo (natural)
+GET http://localhost:3000/usuarios?type=natural
+Content-Type: application/json
+
+###
+
+# Obtener un usuario por ID
+GET http://localhost:3000/usuarios/1
+Content-Type: application/json
+
+###
+
+# Crear un usuario persona natural
+POST http://localhost:3000/usuarios/natural
+Content-Type: application/json
+
+{
+  "name": "Juan Pérez",
+  "email": "juan.perez@example.com",
+  "password": "securepassword",
+  "gender": "male",
+  "postalCode": "10001"
+}
+
+###
+
+# Crear un usuario persona jurídica
+POST http://localhost:3000/usuarios/juridica
+Content-Type: application/json
+
+{
+  "companyName": "Empresa SAC",
+  "ruc": "20123456789",
+  "sector": "Tecnología",
+  "location": "Lima, Perú",
+  "postalCode": "15000",
+  "employees": 50,
+  "startDate": "2020-01-01",
+  "email": "contacto@empresa.com",
+  "password": "securepassword"
+}
+
+###
+
+# Actualizar un usuario por ID
+PUT http://localhost:3000/usuarios/1
+Content-Type: application/json
+
+{
+  "name": "Nuevo Nombre"
+}
+
+###
+
+# Eliminar un usuario por ID
+DELETE http://localhost:3000/usuarios/1
+Content-Type: application/json
+
+###
+
+# Verificar si un correo electrónico existe
+GET http://localhost:3000/usuarios/check-email?email=alejandroperez@example.com
+Content-Type: application/json
+
+### Validar contraseña con correo electrónico
+POST http://localhost:3000/usuarios/validate-password
+Content-Type: application/json
+
+{
+  "identifier": "example@example.com",
+  "password": "securepassword"
+}
+
+### Validar contraseña con número de celular
+POST http://localhost:3000/usuarios/validate-password
+Content-Type: application/json
+
+{
+  "identifier": "123456789",
+  "password": "securepassword"
+}
+
+### Caso con campos faltantes
+POST http://localhost:3000/usuarios/validate-password
+Content-Type: application/json
+
+{
+  "identifier": "example@example.com"
+}
+
+### Caso de usuario no encontrado
+POST http://localhost:3000/usuarios/validate-password
+Content-Type: application/json
+
+{
+  "identifier": "alejandro@example.com",
+  "password": "securepassword"
+}
+
+### Caso de contraseña incorrecta
+POST http://localhost:3000/usuarios/validate-password
+Content-Type: application/json
+
+{
+  "identifier": "example@example.com",
+  "password": "wrongpassword"
+}
+
+POST http://localhost:3000/create-user
+Content-Type: application/json
+
+{
+  "dni": "12345678",
+  "name": "Alejandro Pérez",
+  "email": "alejandro@example.com",
+  "password": "securepassword",
+  "gender": "Masculino",
+  "phone": "123456789",
+  "postalCode": "10001"
+}

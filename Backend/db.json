@@ -1,0 +1,139 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop Dell",
+      "description": "Laptop ideal para desarrollo de software",
+      "price": 1200,
+      "category": "Tecnología",
+      "stock": 15,
+      "limit": 5,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Mouse Logitech",
+      "description": "Mouse inalámbrico ergonómico",
+      "price": 50,
+      "category": "Periféricos",
+      "stock": 50,
+      "limit": 10,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Monitor Samsung",
+      "description": "Monitor LED Full HD de 24 pulgadas",
+      "price": 200,
+      "category": "Accesorios",
+      "stock": 20,
+      "limit": 5,
+      "image": "https://via.placeholder.com/150"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "type": "natural",
+      "dni": "12345678",
+      "name": "Alejandro Pérez",
+      "email": "alejandro@example.com",
+      "password": "securepassword",
+      "gender": "male",
+      "phone": "123456789",
+      "postalCode": "10001"
+    },
+    {
+      "id": 2,
+      "type": "juridica",
+      "ruc": "20123456789",
+      "companyName": "Empresa SAC",
+      "sector": "Tecnología",
+      "location": "Lima, Perú",
+      "postalCode": "15000",
+      "employees": 50,
+      "startDate": "2020-01-01",
+      "email": "contacto@empresa.com",
+      "phone": "934085336",
+      "password": "securepassword"
+    },
+    {
+      "id": 3,
+      "type": "natural",
+      "name": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "password": "securepassword",
+      "gender": "male",
+      "postalCode": "10001"
+    },
+    {
+      "id": 4,
+      "type": "juridica",
+      "companyName": "Empresa SAC",
+      "ruc": "20123456789",
+      "sector": "Tecnología",
+      "location": "Lima, Perú",
+      "postalCode": "15000",
+      "employees": 50,
+      "startDate": "2020-01-01",
+      "email": "contacto@empresa.com",
+      "password": "securepassword"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "userId": 1,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 2
+        },
+        {
+          "productId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": 2500,
+      "date": "2024-12-05"
+    }
+  ],
+  "invoices": [
+    {
+      "id": 1,
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 1
+        },
+        {
+          "productId": 3,
+          "quantity": 3
+        }
+      ],
+      "total": 3000,
+      "date": "2024-12-05"
+    }
+  ],
+  "paymentMethods": [
+    {
+      "id": 1,
+      "userId": 1,
+      "type": "Credit Card",
+      "details": {
+        "cardNumber": "1234-5678-9876-5432",
+        "expirationDate": "12/25"
+      }
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "type": "Bank Transfer",
+      "details": {
+        "bankName": "Bank of Example",
+        "accountNumber": "00123456789"
+      }
+    }
+  ]
+}
